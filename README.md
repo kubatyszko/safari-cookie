@@ -10,6 +10,14 @@ See python cookie.py -h for help on usage.
 
 Default cookie storage for Safari is `~/Library/Cookies/Cookies.binarycookies`
 
+### Automatically filter cookies
+In `filter-cookie` directory there is an example script and launchd job that will filter the cookies using a whitelist.
+
+To use this setup copy `cookie.py` in your PATH, rename it `cookie` and make it executable.
+The put `filter-script` in `/usr/local/bin` and `rn.hmjoj.filter-cookie` in `~/Library/LaunchAgents`
+
+Now everytime Safari writes his cookies they will be filtered.
+
 ### License
 Dual licensed under the MIT and GPL licenses:  
 http://www.opensource.org/licenses/mit-license.php  

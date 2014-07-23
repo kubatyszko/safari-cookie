@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Disabled</key>
+	<false/>
+	<key>Label</key>
+	<string>rn.hmjoj.safari-cookie</string>
+	<key>OnDemand</key>
+	<true/>
+	<key>Program</key>
+	<string>/usr/local/bin/filter-cookie</string>
+	<key>StandardErrorPath</key>
+	<string>/dev/console</string>
+	<key>StandardOutPath</key>
+	<string>/dev/console</string>
+	<key>WatchPaths</key>
+	<array>
+		<string>/Users/Michele/Library/Cookies/Cookies.binarycookies</string>
+	</array>
+</dict>
+</plist>

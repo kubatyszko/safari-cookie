@@ -1,0 +1,4 @@
+#!/bin/zsh
+source ~/.zshrc  # Load your enviroment if needed 
+domains=""       # Insert your domain here. (Separate with spaces)
+cookie ~/Library/Cookies/Cookies.binarycookies -w $domains
