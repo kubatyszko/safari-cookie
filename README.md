@@ -8,6 +8,8 @@ You can filter cookies by domain name using a blacklist or whitelist or dump the
 ### Usage
 See python cookie.py -h for help on usage.
 
+Default cookie storage for Safari is `~/Library/Cookies/Cookies.binarycookies`
+
 ### License
 Dual licensed under the MIT and GPL licenses:  
 http://www.opensource.org/licenses/mit-license.php  
