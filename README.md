@@ -5,6 +5,9 @@
 Parse and write `.binaryCookies` format used by Safari and other iOS/OSX applications.
 You can filter cookies by domain name using a blacklist or whitelist or dump the data and export in other formats.
 
+### Usage
+See python cookie.py -h for help on usage.
+
 ### License
 Dual licensed under the MIT and GPL licenses:  
 http://www.opensource.org/licenses/mit-license.php  
