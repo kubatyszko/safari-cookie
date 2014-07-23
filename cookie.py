@@ -3,6 +3,7 @@
 import argparse
 import subprocess
 import logging
+import json
 from io import BytesIO
 from struct import pack, unpack
 from time import gmtime, strftime
@@ -226,6 +227,9 @@ def main():
 	mode.add_argument('-w', '--whitelist',
 					type=str, nargs='+', metavar='domain',
 					help='Keep only cookies of given domains')
+	mode.add_argument('-e', '--export', metavar='file',
+						type=argparse.FileType('w'),
+						help='Export cookies in JSON format')
 	parser.add_argument('file', type=argparse.FileType('r+b'),
 						help='Binary cookies file')
 	parser.add_argument('-v', '--verbose',
@@ -241,7 +245,7 @@ def main():
 	cookies = parse(args.file)
 
 	if args.dump:
-		log.info('Dumping data')
+		log.info('Dumping data...')
 
 		for i in cookies:
 			if args.verbose == 2:
@@ -254,6 +258,11 @@ def main():
 													flag_type(i['flags']),
 													date(i['creation_date']),
 													date(i['expiry_date'])))
+	elif args.export:
+		log.info('Exporting data...')
+		json.dump(cookies, args.export)
+		log.info('Wrote %d cookies into: %s', len(cookies), args.export.name)
+
 
 	else:
 		log.info('Filtering data...')
